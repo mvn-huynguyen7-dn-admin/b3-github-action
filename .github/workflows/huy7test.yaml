@@ -1,10 +1,14 @@
-name: hello world
+name: huy7test
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "0/10 * * * *"
 jobs:
   test-zui:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "NAME=$Nguyen cuu duc huy" >> $GITHUB_ENV
+      - run: echo "xin chao $NAME"
       - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
       - run: echo "today is $TODAY"
