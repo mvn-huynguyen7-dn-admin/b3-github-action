@@ -1,0 +1,12 @@
+name: huy7test
+on:
+  push:
+    branches: [feature]
+  pull_request:
+    type: [opened,reopened,synchronize,labeled,unlabled]
+  workflow_dispatch:
+jobs:
+  test-zui:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $PWD
