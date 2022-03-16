@@ -2,6 +2,8 @@ name: huy7test
 on:
   push:
     branches: [main]
+  pull_request:
+    type: [opened,reopened,synchronize,labeled,unlabled]
   schedule:
     - cron: "0/10 * * * *"
   workflow_dispatch:
