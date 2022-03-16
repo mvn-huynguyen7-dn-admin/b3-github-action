@@ -37,8 +37,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker build 
         run: |
-          docker image build -t nginx:v1 .
-          docker run nginx:v1
-          docker ps -a
+          docker build -t nginx:v1 .
+          docker images
 
 
