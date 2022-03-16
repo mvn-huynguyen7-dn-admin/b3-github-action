@@ -6,7 +6,6 @@ on:
     type: [opened,reopened,synchronize,labeled,unlabled]
   schedule:
     - cron: "0/10 * * * *"
-  workflow_dispatch:
 jobs:
   test-zui:
     runs-on: ubuntu-latest
