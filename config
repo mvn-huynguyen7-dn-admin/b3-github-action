@@ -8,3 +8,6 @@
 [remote "origin"]
 	url = https://github.com/mvn-huynguyen7-dn-admin/learning-devops-b3.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
+	
+	
+	
