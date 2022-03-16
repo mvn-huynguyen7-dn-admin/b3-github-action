@@ -38,4 +38,5 @@ jobs:
           docker build -t nginx:v1 .
           docker run nginx:v1
           docker ps -a
+          docker version
 
