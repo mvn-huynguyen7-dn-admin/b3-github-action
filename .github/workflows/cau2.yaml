@@ -10,3 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo $PWD
+      - run: ls -la
+      - run: printenv
+      - names: Config aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with: 
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - run: aws s3 ls
