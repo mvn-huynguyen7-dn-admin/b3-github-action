@@ -9,7 +9,8 @@ jobs:
   test-zui:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "NAME=$Nguyen cuu duc huy" >> $GITHUB_ENV
-      - run: echo "xin chao $NAME"
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo "today is $TODAY"
+      - run: |
+          echo "NAME=Nguyen cuu duc huy" >> $GITHUB_ENV
+          echo "xin chao $NAME"
+          echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+          echo "today is $TODAY"
