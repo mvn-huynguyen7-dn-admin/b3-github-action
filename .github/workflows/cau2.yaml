@@ -1,7 +1,5 @@
 name: huy7test
 on:
-  push:
-    branches: [test]
   pull_request:
     type: [opened,reopened,synchronize,labeled,unlabled]
   workflow_dispatch:
