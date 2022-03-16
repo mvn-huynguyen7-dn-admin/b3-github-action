@@ -37,7 +37,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker build 
         run: |
-          docker build -t nginx:v1 .
+          docker build -t huy7test .
           docker images
+          aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/d0c1s4l6
+          docker tag huy7test:latest public.ecr.aws/d0c1s4l6/huy7test:latest
+          docker push public.ecr.aws/d0c1s4l6/huy7test:latest
+
+
+
 
 
