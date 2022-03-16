@@ -2,18 +2,14 @@ name: huy7test
 on:
   push:
     branches: [main]
-  pull_request:
-    type: [opened,reopened,synchronize,labeled,unlabled]
   schedule:
     - cron: "0/10 * * * *"
+  workflow_dispatch:
 jobs:
   test-zui:
     runs-on: ubuntu-latest
     steps:
-      - name: huy7test
-        shell: bash
-        run: |
-          echo "NAME=Nguyen cuu duc huy" >> $GITHUB_ENV
-          echo "xin chao $NAME"
-          echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-          echo "today is $TODAY"
+      - run: echo "NAME=nguyen cuu duc huy" >> $GITHUB_ENV
+      - run: echo "xin chao $NAME"
+      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - run: echo "today is $TODAY"
